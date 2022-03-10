@@ -4,15 +4,12 @@ import HomePage from './pages/homepage/homepage.component';
 
 import ShopPage from './pages/shop/shop.component';
 
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-);
+import HeaderComponenet from './components/header-component/header-component';
 
 function App() {
   return (
     <div>
+      <HeaderComponenet />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/shop' component={ShopPage} />
