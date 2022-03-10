@@ -1,0 +1,17 @@
+.btn {
+    width: max-content;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 18px;
+    background-color: #FDFF8F;
+    color: #212121;
+    margin: 10px 50px 10px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn:hover {
+    color: #1B1A17;
+    background-color: #F6416C;
+    transition: 0.3s ease-in-out;
+}
