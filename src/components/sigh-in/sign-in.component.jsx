@@ -56,13 +56,15 @@ class SignIn extends Component {
                     label='password'
                     autoComplete='off'/>
 
+                   <div className='google-div'>
                     <button className='btn'
-                    type="submit">Sign In </button>
+                        type="submit">Sign In </button>
                     <button className="btn btn-google" onClick= {
                             signInWithGoogle
-                    }>
+                        }>
                         Sign In With Google 
                     </button> 
+                   </div>
                 </form>
 
             </div>
