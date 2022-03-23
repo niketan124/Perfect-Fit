@@ -13,7 +13,7 @@ class SignUp extends Component {
             email: '',
             password: '',
             confirmPassword: '',
-            photoUrl: 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=100'
+            photoUrl: ''
         }
     }
     handleSubmit = async event => {
@@ -27,16 +27,26 @@ class SignUp extends Component {
         try {
             const {user} = await auth.createUserWithEmailAndPassword(email, password);
             await createUserProfileDocument(user, {displayName});
-            this.setState = {
+            this.setState({
                 displayName: '',
                 email: '',
                 password: '',
                 confirmPassword: '',
-                photoUrl: 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=100'
-            }
-
+            });
         } catch (error) {
-            console.log(error);
+            switch (error.code) {
+                case 'auth/email-already-in-use':
+                    alert ("You already have an account with that email.")
+                    break;
+                case 'auth/invalid-email':
+                    alert ('Please provide a valid email')
+                    break;
+                case 'auth/weak-password':
+                    alert('The password is too weak.')
+                    break
+                default:
+                    console.log(error);
+            }
         }
 
     };
