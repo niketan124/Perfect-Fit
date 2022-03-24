@@ -35,4 +35,31 @@
       }
     }
   }
-  
+
+.image {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-btn {
+  visibility: hidden;
+  margin-right: 0 !important;
+  position: absolute;
+  overflow: hidden;
+  left: 30%;
+  margin-top: 250px !important;
+  text-transform: uppercase;
+}
+
+
+.image:hover {
+  opacity: 0.8;
+  transition: 0.3s fade;
+}
+
+.image:hover .card-btn {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1 !important;
+}

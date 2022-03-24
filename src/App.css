@@ -25,3 +25,7 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
+
+* {
+  user-select: none;
+}
