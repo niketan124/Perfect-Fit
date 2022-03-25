@@ -10,6 +10,7 @@ import SignInSignOut from './pages/sigh-in-sign-out/sigh-in-sign-out.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 import HeaderComponenet from './components/header-component/header-component';
+import CheckOut from './pages/checkout/checkout.component';
 
 
 
@@ -52,6 +53,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/shop' component={ShopPage} />
           <Route exact path='/signin' component={SignInSignOut} />
+          <Route exact path='/checkout' component={CheckOut} />
         </Switch>
       </div>
     );

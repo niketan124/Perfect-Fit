@@ -27,9 +27,17 @@
     }
   
     button {
+      cursor: pointer;
         top: 280px;
         left: 45px;
         position: absolute;
         margin: 10px 0;
+    }
+
+    .checkout {
+      padding: 100px 0;
+      font-size: 16px !important;
+      color: #212121 !important;
+      text-decoration: none !important;
     }
   }
